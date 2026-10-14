@@ -1,0 +1,180 @@
+/* Touch-friendly sizing: every tappable target is at least ~64px. */
+
+.status-pill {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+.status-pill.connected { color: var(--success-color); }
+.status-pill.connecting { color: var(--warning-color); }
+.status-pill.offline { color: var(--error-color); }
+
+.controls {
+  padding: 12px;
+}
+
+.control-tile {
+  border-radius: 16px;
+  padding: 8px 12px;
+}
+.control-tile .tile-title {
+  font-weight: 700;
+  font-size: 1.05em;
+}
+.control-tile .tile-sub {
+  font-size: 0.85em;
+  opacity: 0.8;
+  font-feature-settings: "tnum";
+}
+.control-tile.live,
+.control-tile.recording {
+  background: var(--destructive-bg-color);
+  color: var(--destructive-fg-color);
+}
+.control-tile.paused {
+  background: var(--warning-bg-color);
+  color: var(--warning-fg-color);
+}
+.control-tile.on {
+  background: var(--accent-bg-color);
+  color: var(--accent-fg-color);
+}
+.control-tile.busy {
+  opacity: 0.7;
+}
+
+.scene-tile {
+  border-radius: 18px;
+  padding: 12px;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+.scene-tile.program {
+  background: var(--destructive-bg-color);
+  color: var(--destructive-fg-color);
+}
+.scene-tile.preview {
+  background: var(--success-bg-color);
+  color: var(--success-fg-color);
+}
+.scene-tile .badge {
+  font-size: 0.6em;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.hotkey-tile {
+  border-radius: 16px;
+  padding: 10px 14px;
+}
+.hotkey-tile .hotkey-label {
+  font-weight: 600;
+}
+.hotkey-tile .hotkey-sub {
+  font-size: 0.75em;
+  opacity: 0.6;
+}
+.hotkey-tile.multi {
+  border: 2px dashed alpha(currentColor, 0.25);
+}
+.star-button {
+  min-width: 40px;
+  min-height: 40px;
+  margin: 4px;
+}
+.star-button:checked {
+  color: var(--warning-color);
+  background: none;
+}
+
+.section-title {
+  font-weight: 800;
+  font-size: 1.1em;
+  margin-top: 8px;
+}
+
+.audio-row {
+  padding: 12px 16px;
+}
+.audio-row .audio-name {
+  font-weight: 700;
+  font-size: 1.05em;
+}
+.audio-row .db-label {
+  font-feature-settings: "tnum";
+  min-width: 72px;
+}
+.audio-row scale {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.audio-row scale trough {
+  min-height: 10px;
+}
+.audio-row scale slider {
+  min-width: 34px;
+  min-height: 34px;
+}
+.mute-button {
+  min-width: 72px;
+  min-height: 64px;
+  border-radius: 14px;
+}
+.mute-button.muted {
+  background: var(--destructive-bg-color);
+  color: var(--destructive-fg-color);
+}
+
+.big-button {
+  min-height: 56px;
+  min-width: 200px;
+  font-size: 1.1em;
+}
+
+/* ---- Responsive tile sizing ----
+ * Grids are homogeneous FlowBoxes: columns = available width / tile min-width.
+ * The window carries one density class (tiles-small|medium|large) and, below 640sp,
+ * `compact`, which comes last so it wins and keeps 2+ columns on phone widths. */
+
+.tiles-small .control-tile { min-width: 88px; min-height: 68px; }
+.tiles-medium .control-tile { min-width: 112px; min-height: 84px; }
+.tiles-large .control-tile { min-width: 140px; min-height: 100px; }
+
+.tiles-small .scene-tile { min-width: 150px; min-height: 90px; }
+.tiles-medium .scene-tile { min-width: 200px; min-height: 120px; }
+.tiles-large .scene-tile { min-width: 270px; min-height: 160px; font-size: 1.45em; }
+
+.tiles-small .hotkey-tile { min-width: 150px; min-height: 68px; }
+.tiles-medium .hotkey-tile { min-width: 200px; min-height: 84px; }
+.tiles-large .hotkey-tile { min-width: 270px; min-height: 104px; }
+
+.compact .controls { padding: 8px; }
+.compact .control-tile { min-width: 64px; min-height: 64px; padding: 6px; }
+.compact .control-tile .tile-title { font-size: 0.9em; }
+.compact .scene-tile { min-width: 110px; min-height: 84px; font-size: 1.05em; }
+.compact .hotkey-tile { min-width: 110px; min-height: 68px; }
+.page-content { margin: 16px; }
+.compact .page-content { margin: 8px; }
+
+.tiles-small .audio-row { min-width: 280px; }
+.tiles-medium .audio-row { min-width: 340px; }
+.tiles-large .audio-row { min-width: 420px; }
+.compact .audio-row { min-width: 240px; }
+
+/* ---- Custom panel ---- */
+.panel-tile .tile-icon { opacity: 0.75; }
+.scene-tile.muted {
+  background: var(--destructive-bg-color);
+  color: var(--destructive-fg-color);
+}
+.scene-tile.missing { opacity: 0.45; }
+.panel-tile.editing { border: 2px dashed alpha(currentColor, 0.35); }
+.add-tile {
+  background: none;
+  border: 2px dashed alpha(currentColor, 0.3);
+}
+.edit-bar button {
+  min-width: 44px;
+  min-height: 44px;
+}

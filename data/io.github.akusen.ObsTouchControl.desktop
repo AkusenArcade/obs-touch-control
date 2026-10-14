@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=OBS Touch Control
+GenericName=Controllo OBS
+Comment=Controllo touch di OBS Studio: scene, scorciatoie, audio
+Exec=obs-touch-control
+Icon=io.github.akusen.ObsTouchControl
+Terminal=false
+Categories=AudioVideo;Video;
+Keywords=OBS;stream;streaming;scene;hotkey;touch;
+StartupNotify=true
+StartupWMClass=io.github.akusen.ObsTouchControl
