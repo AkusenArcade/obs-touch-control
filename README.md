@@ -55,3 +55,7 @@ la password WebSocket è salvata in chiaro).
   tieni premuto (o clic destro) su un riquadro per **rinominarlo**.
 - Per le hotkey per sorgente il selettore propone tutte le sorgenti/scene plausibili; se una
   sorgente non ha quella hotkey OBS risponde con un errore (mostrato come notifica).
+
+## Licenza
+
+[MIT](LICENSE): puoi usare, modificare, fare fork e ridistribuire liberamente, anche per scopi commerciali, mantenendo la nota di copyright.
